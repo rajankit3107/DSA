@@ -3,22 +3,16 @@ using namespace std;
 
 int findUniqueElement(int arr[], int size)
 {
-
-    int temp = arr[0];
+    int uniqueElement = 0;
 
     for (int i = 0; i < size; i++)
     {
-        if (temp == arr[i])
-        {
-            i++;
-        }
-        else
-        {
-            temp = arr[i];
-        }
+        uniqueElement = uniqueElement ^ arr[i];
+
+        // explain working - 1^1 = 0, 0^0 = 0, 1^0 = 1, 0^1 = 1
     }
 
-    return temp;
+    return uniqueElement;
 }
 
 int main()
