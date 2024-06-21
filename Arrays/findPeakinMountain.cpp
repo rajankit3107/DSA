@@ -11,7 +11,7 @@ int findPeakIndexInArray(int arr[], int size)
 
     while (stIdx < endIdx)
     {
-        if (arr[mid] < arr[mid + 1])
+        if (arr[mid] <= arr[mid + 1])
         {
             stIdx = mid + 1;
         }
