@@ -1,27 +1,20 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
+int main() {
     int n;
-    cout << "Enter a number u want to check: ";
     cin >> n;
-
-    long sum = 0;
-    int originalN = n;
-
-    while (n > 0)
-    {
-        long lastDigit = n % 10;
-        sum = sum + lastDigit * lastDigit * lastDigit;
-        n = n / 10;
+    int temp = n;
+    int sum = 0;
+    while (temp > 0) {
+        int lastDigit = temp % 10;
+        sum += lastDigit * lastDigit * lastDigit;
+        temp /= 10;
     }
-    if (sum == originalN)
-    {
-        cout << originalN << " It is a Armstrong Number" << endl;
+    if (sum == n) {
+        cout << "Armstrong Number" << endl;
+    } else {
+        cout << "Not an Armstrong Number" << endl;
     }
-    else
-    {
-        cout << originalN << " is not a Armstrong Number" << endl;
-    }
+    return 0;
 }

@@ -34,13 +34,11 @@ int main()
     {
         if (n % i == 0)
         {
-            if (i * i == n)
+            count++;
+
+            if (n / i != i) //here we are checking if the number is a perfect square or not
             {
                 count++;
-            }
-            else
-            {
-                count += 2;
             }
         }
     }
