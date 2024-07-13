@@ -3,14 +3,14 @@ using namespace std;
 
 void reverseArr(int arr[], int size)
 {
-    for (int i = 0; i < size / 2; i++)
+    if (size == 0)
     {
-        swap(arr[i], arr[size - i - 1]);
+        return;
     }
-
-    for (int i = 0; i < size; i++)
+    else
     {
-        cout << arr[i] << " ";
+        cout << arr[size - 1] << " ";
+        reverseArr(arr, size - 1);
     }
 }
 
